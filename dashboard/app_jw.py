@@ -572,7 +572,7 @@ def server(input, output, session):
         bottom = np.zeros(len(pivot))
         colors = ['#FFD700', '#FF6347', '#DB7093']
         for idx, col in enumerate(pivot.columns):
-            ax.bar(pivot.index, pivot[col], bottom=bottom, color=colors[idx], label=col, width=0.8, alpha=0.85)
+            ax.bar(pivot.index, pivot[col], bottom=bottom, color=colors[idx], label=col, width=0.8, alpha=0.85) 
             bottom += pivot[col].values
         ax.set_title(f"{selected_month}월 {selected_day}요일 시간대별 작업유형별 전력 사용량")
         ax.set_xlabel("시각(0~23시)")
